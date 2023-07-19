@@ -15,7 +15,7 @@ export const isAuthenticated = async (req: express.Request, res: express.Respons
         if(players==="invalid token"){
             return res.sendStatus(403);
         }
-        
+        console.log(players);
         const playersJSON = JSON.parse(players.data);
         merge(req, playersJSON);
         
